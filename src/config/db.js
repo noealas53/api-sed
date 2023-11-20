@@ -1,8 +1,8 @@
 const { MongoClient } = require('mongodb');
 var debug = require('debug')('api-sed:db');
 
-const client = new MongoClient(process.env.MONGO_URI);
-const base = process.env.BASE;
+const client = new MongoClient("mongodb://localhost:27017");
+const base = "db-sed";
 
 async function connection() {
     try {

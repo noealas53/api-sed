@@ -49,23 +49,15 @@ exports.deletePubli = async (req, res) => {
 
 exports.addPubli = async (req, res) => {
     try {
-        const { idUser, url, name, price, description, category, state } = req.body;
+        const { url, name, price, description, category, state } = req.body;
     
         // Verificar si hay campos vacíos
-        if (!idUser || !url || !name || !price || !description || !category || !state)
+        if ( !url || !name || !price || !description || !category || !state)
           return res.status(400).json({ message: 'All fields are required' });
 
-        const userId = new ObjectId(idUser);
-
-        // Buscar el usuario por su _id
-        const user = await client.db(base).collection('users').findOne({ "_id": userId });
-
-        if(!user)
-            return res.status(400).json({ message: 'User not found' });
-    
+        
         // Creación del nuevo usuario
         await client.db(base).collection('publications').insertOne({
-            userId: userId,
             url,
             name,
             price,

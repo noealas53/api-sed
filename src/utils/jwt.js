@@ -2,17 +2,17 @@ const jwt = require("jsonwebtoken")
 
 // 
 exports.signToken = (payload) => {
-    const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '24h' });
+    const token = jwt.sign(payload, "ESOBRAT", { expiresIn: '24h' });
     
     return token;
 }
 
 exports.signTokenForRecovery = (payload) => {
-    const token = jwt.sign(payload, process.env.JWT_RECOVERY_SECRET, { expiresIn: '5m' });
+    const token = jwt.sign(payload, "ESOBRAT_RECOVERY", { expiresIn: '5m' });
 
     return token
 }
 
 exports.verifyTokenForRecovery = (token) => {
-    return jwt.verify(token, process.env.JWT_RECOVERY_SECRET);
+    return jwt.verify(token, "ESOBRAT_RECOVERY");
 }

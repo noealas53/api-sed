@@ -1,0 +1,381 @@
+_type: export
+__export_format: 4
+__export_date: 2023-11-12T19:57:13.109Z
+__export_source: insomnia.desktop.app:v8.4.0
+resources:
+  - _id: req_cb8288e57f444df3a3d1a5e25973ef97
+    parentId: fld_317346d0d4704f639cc14c38ab706734
+    modified: 1699817973677
+    created: 1699817922267
+    url: "{{ _.base_url }}/api/publications/delete/6551280e6a3b1c693d4ed5bd"
+    name: deletePublications
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/8.4.0
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFVzZXIiOiI2NTUwMjc2ZGJkM2NiOWJjMjVmZDcyZDIiLCJpYXQiOjE2OTk4MTY5NzAsImV4cCI6MTY5OTkwMzM3MH0._2kweMuQzlkYKc3kA8LveKESmPP2ERNg0MmgMcfMADM
+    metaSortKey: -1699817922267
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_317346d0d4704f639cc14c38ab706734
+    parentId: wrk_e088e60971d74e7d8d976a79adc7da99
+    modified: 1699816996288
+    created: 1699816996288
+    name: Publications
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1699816996288
+    _type: request_group
+  - _id: wrk_e088e60971d74e7d8d976a79adc7da99
+    parentId: null
+    modified: 1699564467318
+    created: 1699564467318
+    name: api-sed.yaml
+    description: ""
+    scope: design
+    _type: workspace
+  - _id: req_1d200838d3df4a919dd67cbcd9a466d7
+    parentId: fld_317346d0d4704f639cc14c38ab706734
+    modified: 1699817723268
+    created: 1699817578152
+    url: "{{ _.base_url }}/api/publications/update"
+    name: updatePublications
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"idPublicacion": "6551280e6a3b1c693d4ed5bd",
+        	"idUser": "655026436c8ef6f3eb686226",
+        	"url": "https://www.google.com",
+          "name": "Zapatos",
+          "price": "$4.45",
+          "description": "Zapatos amarillos",
+          "category": "Ropa y calzado",
+          "state": "usado"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.4.0
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFVzZXIiOiI2NTUwMjc2ZGJkM2NiOWJjMjVmZDcyZDIiLCJpYXQiOjE2OTk4MTY5NzAsImV4cCI6MTY5OTkwMzM3MH0._2kweMuQzlkYKc3kA8LveKESmPP2ERNg0MmgMcfMADM
+    metaSortKey: -1699817578152
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_5d945efd053f40138bc6e377b96081dc
+    parentId: fld_317346d0d4704f639cc14c38ab706734
+    modified: 1699817622730
+    created: 1699817055246
+    url: "{{ _.base_url }}/api/publications/create"
+    name: addPublications
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"idUser": "655026436c8ef6f3eb686226",
+        	"url": "https://www.google.com",
+          "name": "Zapatos",
+          "price": "$3.45",
+          "description": "Zapatos amarillos",
+          "category": "Ropa y calzado",
+          "state": "usado"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.4.0
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFVzZXIiOiI2NTUwMjc2ZGJkM2NiOWJjMjVmZDcyZDIiLCJpYXQiOjE2OTk4MTY5NzAsImV4cCI6MTY5OTkwMzM3MH0._2kweMuQzlkYKc3kA8LveKESmPP2ERNg0MmgMcfMADM
+    metaSortKey: -1699817055246
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_b12e678851aa432a8bf96547656c5a57
+    parentId: fld_317346d0d4704f639cc14c38ab706734
+    modified: 1699817048200
+    created: 1699817007841
+    url: "{{ _.base_url }}/api/publications/"
+    name: getAllPublications
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/8.4.0
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFVzZXIiOiI2NTUwMjc2ZGJkM2NiOWJjMjVmZDcyZDIiLCJpYXQiOjE2OTk4MTY5NzAsImV4cCI6MTY5OTkwMzM3MH0._2kweMuQzlkYKc3kA8LveKESmPP2ERNg0MmgMcfMADM
+    metaSortKey: -1699817007841
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_20c1134d740e46d8819db02026682aa1
+    parentId: fld_528f4287871b405fa6393aef6df2bb43
+    modified: 1699751787771
+    created: 1699738154406
+    url: "{{ _.base_url }}/api/auth/register"
+    name: register
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "noe",
+        	"lastName": "alas",
+        	"email": "1@uca.edu.sv",
+        	"password": "noealas123",
+        	"confirmPassword": "noealas123",
+        	"phone": "76564754",
+        	"rol": "usuario"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.4.0
+    authentication: {}
+    metaSortKey: -1699738154406
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_528f4287871b405fa6393aef6df2bb43
+    parentId: wrk_e088e60971d74e7d8d976a79adc7da99
+    modified: 1699737919106
+    created: 1699737919106
+    name: Auth
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1699737919106
+    _type: request_group
+  - _id: req_d921c2b05e664e73841fb9ee6441e025
+    parentId: fld_528f4287871b405fa6393aef6df2bb43
+    modified: 1699816968922
+    created: 1699737924349
+    url: "{{ _.base_url }}/api/auth/login"
+    name: login
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"email": "1@uca.edu.sv",
+        	"password": "noealas123"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.4.0
+    authentication: {}
+    metaSortKey: -1699737924349
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_04f4da564b29477bb9a24be2feefa55c
+    parentId: fld_e6ebb9561daf4b5d903fa95243ab904f
+    modified: 1699672270027
+    created: 1699662141804
+    url: "{{ _.base_url }}/api/users/update"
+    name: updateUser
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"username": "noe",
+        	"rol": "1"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.4.0
+    authentication: {}
+    metaSortKey: -1699662141804
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_e6ebb9561daf4b5d903fa95243ab904f
+    parentId: wrk_e088e60971d74e7d8d976a79adc7da99
+    modified: 1699737911587
+    created: 1699564538747
+    name: Users
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1699564538747
+    _type: request_group
+  - _id: req_1fa6ad54a8334e7facc01e750274965e
+    parentId: fld_e6ebb9561daf4b5d903fa95243ab904f
+    modified: 1699673994345
+    created: 1699661606531
+    url: "{{ _.base_url }}/api/users/create"
+    name: addUser
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"username": "pedro",
+        	"password": "hola",
+        	"rol": "administrador"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.4.0
+    authentication: {}
+    metaSortKey: -1699661606531
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_3d3c6572830b40f5911766669eeb871a
+    parentId: fld_e6ebb9561daf4b5d903fa95243ab904f
+    modified: 1699751836712
+    created: 1699659460647
+    url: "{{ _.base_url }}/api/users/delete/6550276dbd3cb9bc25fd72d2"
+    name: deleteUser
+    description: ""
+    method: DELETE
+    body: {}
+    parameters:
+      - id: pair_e8903b2097ee4ff7b6ac4012500c75ac
+        name: ""
+        value: ""
+        description: ""
+    headers:
+      - name: User-Agent
+        value: insomnia/8.4.0
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFVzZXIiOiI2NTUwMjc2ZGJkM2NiOWJjMjVmZDcyZDIiLCJpYXQiOjE2OTk3NTE3OTYsImV4cCI6MTY5OTgzODE5Nn0.DfqRqvUtRJMZJ54RYPcKkRfM014JO9aXwhybCWNJbN4
+    metaSortKey: -1699659460647
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_f8ddfaff96d3430a96d87c09ab6512f7
+    parentId: fld_e6ebb9561daf4b5d903fa95243ab904f
+    modified: 1699817001309
+    created: 1699564540349
+    url: "{{ _.base_url }}/api/users/"
+    name: getAllUsers
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFVzZXIiOiI2NTUwMjc2ZGJkM2NiOWJjMjVmZDcyZDIiLCJpYXQiOjE2OTk4MTY5NzAsImV4cCI6MTY5OTkwMzM3MH0._2kweMuQzlkYKc3kA8LveKESmPP2ERNg0MmgMcfMADM
+    metaSortKey: -1699564540349
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_505008792a5770e964ad69dda31744eafc3dea8e
+    parentId: wrk_e088e60971d74e7d8d976a79adc7da99
+    modified: 1699564570464
+    created: 1699564467325
+    name: Base Environment
+    data:
+      base_url: localhost:3000
+    dataPropertyOrder:
+      "&":
+        - base_url
+    color: null
+    isPrivate: false
+    metaSortKey: 1699564467325
+    _type: environment
+  - _id: jar_505008792a5770e964ad69dda31744eafc3dea8e
+    parentId: wrk_e088e60971d74e7d8d976a79adc7da99
+    modified: 1699564467327
+    created: 1699564467327
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_62ed062fdf15429aa116933d33965369
+    parentId: wrk_e088e60971d74e7d8d976a79adc7da99
+    modified: 1699564480104
+    created: 1699564467323
+    fileName: api-sed
+    contents: ""
+    contentType: yaml
+    _type: api_spec
